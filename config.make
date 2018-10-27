@@ -77,9 +77,8 @@
 # incorporated directly into the final executable application binary.
 ################################################################################
 # PROJECT_LDFLAGS=-Wl,-rpath=./libs
-PROJECT_LDFLAGS=-Wl,-rpath=./libs
-PROJECT_LDFLAGS += -lpca9685servo
-PROJECT_LDFLAGS += -lwiringPi
+# PROJECT_LDFLAGS=-Wl,-rpath=./libs
+# PROJECT_LDFLAGS += -lwiringPi
 
 ################################################################################
 # PROJECT DEFINES

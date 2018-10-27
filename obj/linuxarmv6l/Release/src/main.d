@@ -585,8 +585,66 @@ obj/linuxarmv6l/Release/src/main.o: \
  /home/pi/openFrameworks/libs/openFrameworks/3d/ofCamera.h \
  /home/pi/openFrameworks/libs/openFrameworks/3d/ofEasyCam.h \
  /home/pi/openFrameworks/apps/myApps/test/src/ofApp.h \
- ../../../../workbench/rpidmx512/lib-pca9685/include/pca9685servo.h \
- ../../../../workbench/rpidmx512/lib-pca9685/include/pca9685.h
+ /home/pi/openFrameworks/addons/ofxSerial/src/ofxSerial.h \
+ /home/pi/openFrameworks/addons/ofxSerial/libs/serial/include/serial/serial.h \
+ /home/pi/openFrameworks/addons/ofxSerial/libs/serial/include/serial/v8stdint.h \
+ /home/pi/openFrameworks/addons/ofxIO/src/ofxIO.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/DirectoryWatcher.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/RecursiveDirectoryIterator.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/RecursiveDirectoryIteratorImpl.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/RecursiveDirectoryIteratorStategies.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/LRUCache.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/AbstractCache.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/LRUStrategy.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/AbstractTypes.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/Base64Encoding.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBuffer.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferUtils.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferReader.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferStream.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferWriter.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/COBSEncoding.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/SLIPEncoding.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/Compression.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/DeviceFilter.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/DirectoryUtils.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/DirectoryFilter.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/DirectoryWatcherManager.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/FileExtensionFilter.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/HexBinaryEncoding.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/HiddenFileFilter.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ImageUtils.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/JSONUtils.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/LinkFilter.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/PathFilterCollection.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/RegexPathFilter.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/SearchPath.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/Thread.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/PollingThread.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ThreadChannel.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ThreadsafeLoggerChannel.h \
+ /home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/URIEncoding.h \
+ /home/pi/openFrameworks/addons/ofxSerial/libs/ofxSerial/include/ofx/IO/SerialDevice.h \
+ /home/pi/openFrameworks/addons/ofxSerial/libs/ofxSerial/include/ofx/IO/SerialDeviceUtils.h \
+ /home/pi/openFrameworks/addons/ofxSerial/libs/ofxSerial/include/ofx/IO/BufferedSerialDevice.h \
+ /home/pi/openFrameworks/addons/ofxSerial/libs/ofxSerial/include/ofx/IO/SerialEvents.h \
+ /home/pi/openFrameworks/addons/ofxSerial/libs/ofxSerial/include/ofx/IO/PacketSerialDevice.h \
+ /home/pi/openFrameworks/addons/ofxOsc/src/ofxOsc.h \
+ /home/pi/openFrameworks/addons/ofxOsc/src/ofxOscArg.h \
+ /home/pi/openFrameworks/addons/ofxOsc/src/ofxOscMessage.h \
+ /home/pi/openFrameworks/addons/ofxOsc/src/ofxOscSender.h \
+ /home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h \
+ /home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h \
+ /home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h \
+ /home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscException.h \
+ /home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h \
+ /home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h \
+ /home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h \
+ /home/pi/openFrameworks/addons/ofxOsc/src/ofxOscBundle.h \
+ /home/pi/openFrameworks/addons/ofxOsc/src/ofxOscReceiver.h \
+ /home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h \
+ /home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h \
+ /home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h
 
 /home/pi/openFrameworks/libs/openFrameworks/ofMain.h:
 
@@ -1798,6 +1856,122 @@ obj/linuxarmv6l/Release/src/main.o: \
 
 /home/pi/openFrameworks/apps/myApps/test/src/ofApp.h:
 
-../../../../workbench/rpidmx512/lib-pca9685/include/pca9685servo.h:
+/home/pi/openFrameworks/addons/ofxSerial/src/ofxSerial.h:
 
-../../../../workbench/rpidmx512/lib-pca9685/include/pca9685.h:
+/home/pi/openFrameworks/addons/ofxSerial/libs/serial/include/serial/serial.h:
+
+/home/pi/openFrameworks/addons/ofxSerial/libs/serial/include/serial/v8stdint.h:
+
+/home/pi/openFrameworks/addons/ofxIO/src/ofxIO.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/DirectoryWatcher.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/RecursiveDirectoryIterator.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/RecursiveDirectoryIteratorImpl.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/RecursiveDirectoryIteratorStategies.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/LRUCache.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/AbstractCache.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/LRUStrategy.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/AbstractTypes.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/Base64Encoding.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBuffer.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferUtils.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferReader.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferStream.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ByteBufferWriter.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/COBSEncoding.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/SLIPEncoding.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/Compression.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/DeviceFilter.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/DirectoryUtils.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/DirectoryFilter.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/DirectoryWatcherManager.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/FileExtensionFilter.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/HexBinaryEncoding.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/HiddenFileFilter.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ImageUtils.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/JSONUtils.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/LinkFilter.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/PathFilterCollection.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/RegexPathFilter.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/SearchPath.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/Thread.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/PollingThread.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ThreadChannel.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/ThreadsafeLoggerChannel.h:
+
+/home/pi/openFrameworks/addons/ofxIO/libs/ofxIO/include/ofx/IO/URIEncoding.h:
+
+/home/pi/openFrameworks/addons/ofxSerial/libs/ofxSerial/include/ofx/IO/SerialDevice.h:
+
+/home/pi/openFrameworks/addons/ofxSerial/libs/ofxSerial/include/ofx/IO/SerialDeviceUtils.h:
+
+/home/pi/openFrameworks/addons/ofxSerial/libs/ofxSerial/include/ofx/IO/BufferedSerialDevice.h:
+
+/home/pi/openFrameworks/addons/ofxSerial/libs/ofxSerial/include/ofx/IO/SerialEvents.h:
+
+/home/pi/openFrameworks/addons/ofxSerial/libs/ofxSerial/include/ofx/IO/PacketSerialDevice.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/src/ofxOsc.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/src/ofxOscArg.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/src/ofxOscMessage.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/src/ofxOscSender.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscException.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/src/ofxOscBundle.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/src/ofxOscReceiver.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h:
+
+/home/pi/openFrameworks/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h:

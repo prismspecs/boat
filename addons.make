@@ -1,1 +1,4 @@
-ofxGPIO
+ofxPoco
+ofxIO
+ofxSerial
+ofxOsc

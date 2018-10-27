@@ -4,111 +4,149 @@
 //--------------------------------------------------------------
 void ofApp::setup() {
 
-  wiringPiSetup();
+        std::vector<ofx::IO::SerialDeviceInfo> devicesInfo = ofx::IO::SerialDeviceUtils::listDevices();
 
-  // wiringPi thinks of GPIO2 as pin 8 for some reason
-  // map: http://wiringpi.com/wp-content/uploads/2013/03/gpio1.png
-  pinMode(8, OUTPUT); // led
-  pinMode(9, INPUT);  // button
+        ofLogNotice("ofApp::setup") << "Connected Devices: ";
 
-  // wiringPi thinks of GPIO18 as pin 1 for some reason
-  pinMode(1, OUTPUT); // softwarepwm controlled servo
-  digitalWrite(1, LOW);
-  softPwmCreate(1, 15, 200);
+        for (std::size_t i = 0; i < devicesInfo.size(); ++i)
+        {
+                ofLogNotice("ofApp::setup") << "\t" << devicesInfo[i];
+        }
 
-  // servo-hat controlled servo
-	servo.SetLeftUs(700);
-	servo.SetRightUs(2400);
-	servo.Dump();
-  servo.SetAngle(CHANNEL(0), ANGLE(90));
+        if (!devicesInfo.empty())
+        {
+                // Connect to the first matching device.
+                bool success = device.setup(devicesInfo[0], 115200);
 
+                if(success)
+                {
+                        ofLogNotice("ofApp::setup") << "Successfully setup " << devicesInfo[0];
+                }
+                else
+                {
+                        ofLogNotice("ofApp::setup") << "Unable to setup " << devicesInfo[0];
+                }
+        }
+        else
+        {
+                ofLogNotice("ofApp::setup") << "No devices connected.";
+        }
+
+        // OSC
+        oscReceiver.setup(PORT);
+        std::cout << "listening for osc messages on port " << PORT << "\n";
+
+        // video
+        vidPlayer.load("testvid.mp4");
+    	vidPlayer.play();
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
 
-  // servo 1.5ms is middle (15 as int)
-  // .5ms to 2.5ms
-  // ofMap(inRot, 0, 180, 5, 25);
+	// OSC
+	while (oscReceiver.hasWaitingMessages()) {
+		ofxOscMessage m;
+		oscReceiver.getNextMessage(&m);
 
-  // for (int i = 0; i < 180; i++) {
-  //   softPwmWrite(1, (int)ofMap(i, 0, 180, 5, 25));
-  //   ofLog() << i;
-  //
-  //   ofSleepMillis(100);
-  // }
+		std::cout << "OSC message received, address: " << m.getAddress() << "\n";
 
-  for (int i = 0; i < 180; i++) {
-    ofLog() << i;
-    //wiringPiI2CWriteReg16 (fd, 0x00, i);
-    //pwmWrite(316, (int)ofMap(i, 0, 180, 5, 25));
+		if(m.getAddress() == "/boat1/mast") {
 
-    servo.SetAngle(CHANNEL(0), ANGLE(i));
+			std::string text = ofToString(m.getArgAsInt(0));
+	        ofx::IO::ByteBuffer textBuffer(text);
+	        device.writeBytes(textBuffer);
+	        device.writeByte('\n');
 
-    ofSleepMillis(50);
-  }
+	        std::cout << "OSC integer value: " << text << "\n";
+		}
+	}
 
-  // digitalWrite(8, HIGH);
-  //
-  // // gpio_led.setval_gpio("1");
-  //
-  // ofSleepMillis(1000);
-  //
-  // digitalWrite(8, LOW);
-  //
-  // // gpio_led.setval_gpio("0");
-  //
-  // ofSleepMillis(1000);
-  //
+        // The serial device can throw exeptions.
+    try
+    {
+        // Read all bytes from the device;
+        // uint8_t buffer[1024];
+        //
+        // while (device.available() > 0)
+        // {
+        //     std::size_t sz = device.readBytes(buffer, 1024);
+        //
+        //     for (std::size_t i = 0; i < sz; ++i)
+        //     {
+        //         std::cout << buffer[i];
+        //     }
+        // }
 
-  // check on button ... seems like all this should be farmed out to threads
-  // button_state = digitalRead(9);
-  // ofLog() << button_state;
-  // if (button_state == 0) {
-  //   softPwmWrite(1, 5);
-  // } else {
-  //   softPwmWrite(1, 25);
-  // }
+        // Send some new bytes to the device to have them echo'd back.
+        // std::string text = ofToString(ofRandom(180));
 
-  // check potentiometer
-  // ofLog() << analogRead(7);
+        // ofx::IO::ByteBuffer textBuffer(text);
+
+        // device.writeBytes(textBuffer);
+        // device.writeByte('\n');
+
+        // ofSleepMillis(5000);
+    }
+    catch (const std::exception& exc)
+    {
+        ofLogError("ofApp::update") << exc.what();
+    }
+
+    // video
+    vidPlayer.update();
+
 }
 
 //--------------------------------------------------------------
-void ofApp::exit() {}
+void ofApp::exit() {
+}
 
 //--------------------------------------------------------------
-void ofApp::draw() {}
+void ofApp::draw() {
+	vidPlayer.draw(0,0);
+}
 
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key) {}
+void ofApp::keyPressed(int key) {
+}
 
 //--------------------------------------------------------------
-void ofApp::keyReleased(int key) {}
+void ofApp::keyReleased(int key) {
+}
 
 //--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y) {}
+void ofApp::mouseMoved(int x, int y) {
+}
 
 //--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button) {}
+void ofApp::mouseDragged(int x, int y, int button) {
+}
 
 //--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button) {}
+void ofApp::mousePressed(int x, int y, int button) {
+}
 
 //--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button) {}
+void ofApp::mouseReleased(int x, int y, int button) {
+}
 
 //--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y) {}
+void ofApp::mouseEntered(int x, int y) {
+}
 
 //--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y) {}
+void ofApp::mouseExited(int x, int y) {
+}
 
 //--------------------------------------------------------------
-void ofApp::windowResized(int w, int h) {}
+void ofApp::windowResized(int w, int h) {
+}
 
 //--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg) {}
+void ofApp::gotMessage(ofMessage msg) {
+}
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo) {}
+void ofApp::dragEvent(ofDragInfo dragInfo) {
+}

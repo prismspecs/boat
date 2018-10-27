@@ -1,11 +1,10 @@
 #pragma once
 
 #include "ofMain.h"
-#include "softPwm.h"
-#include "wiringPi.h"
-#include "wiringPiI2C.h"
+#include "ofxSerial.h"
+#include "ofxOsc.h"
 
-#include "pca9685servo.h"
+#define PORT 12345
 
 class ofApp : public ofBaseApp {
 public:
@@ -26,8 +25,10 @@ public:
   void dragEvent(ofDragInfo dragInfo);
   void gotMessage(ofMessage msg);
 
-  int button_state;
+  ofx::IO::SerialDevice device;
 
-  PCA9685Servo servo;
+  ofxOscReceiver oscReceiver;
+
+  ofVideoPlayer vidPlayer;
 
 };
