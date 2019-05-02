@@ -15,19 +15,18 @@ void loop()
   while (Serial.available() > 0)
   {
     // read the first integer
-    int incoming = Serial.parseInt();
+    String incString = Serial.readStringUntil(10);
+    int incoming = incString.toInt();
+
+    servo1.write(incoming);
+
+    Serial.write(incoming);
 
     // currently i'm using a carriage return
     // after sending data, so check for that
     // before proceeding
-    if (Serial.read() == '\n') {
-
-      servo1.write(incoming);
-
-      Serial.write(incoming);
-
-    }
   }
-
+  
   delay(10);
 }
+
